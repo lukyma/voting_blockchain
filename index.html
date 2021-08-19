@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <title>Hello World DApp</title>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='./css/index.css' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="container">
+  <h1>Justiça Eleitoral da República Federativa das Bananas</h1>
+  <div id="chairperson" class="hidden chairperson">
+    <div class="row">
+      <div class="col-md-4">
+        <form>
+          <div class="form-group">
+            <label for="address">Endreço</label>
+            <input type="text" class="form-control" id="address" placeholder="Endereco">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name" placeholder="Nome">
+            <input type="button" class="btn btn-primary" style="margin-top: 8px;" id="btnVoters" value="Add" />
+          </div>
+        </form>
+      </div>
+      <div class="table-responsive col-md-5">
+        <label>Eleitores</label>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="width:90%">Name</th>
+              <th style="width:10%">Votou</th>
+            </tr>
+          </thead>
+          <tbody id="table-body-address">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <form>
+          <div class="form-group">
+            <label for="proposalName">Candidato</label>
+            <input type="text" class="form-control" id="proposalName" placeholder="Informar proposta">
+            <input type="button" class="btn btn-primary" style="margin-top: 8px;" id="btnProposal" value="Add" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive row">
+    <div class="col-md-5">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th style="width:90%">Candidato</th>
+            <th style="width:10%">Votos</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+    </div>
+    <div id="voteDelegate" class="col-md-5">
+      <form id="detegate-form">
+        <label for="addressDelegate">Endereço</label>
+        <input type="text" class="form-control" id="addressDelegate" placeholder="Endereço">
+        <button type="button" style="margin-top: 20px;" class="btn btn-primary" id="btnDelegate">Delegar Voto</button>
+      </form>
+    </div>
+  </div>
+  <form id="vote-form">
+    <select id="candidate-options" name="candidate"></select>
+    <button type="button" class="btn btn-primary hidden" id="btnVote">Votar</button>
+    <button type="button" style="margin-top: 20px;" class="btn btn-success chairperson hidden" id="btnEndVote">Finalizar
+      Votacao</button>
+  </form>
+</body>
+<script charset="utf-8" src="https://cdn.ethers.io/scripts/ethers-v4.min.js" type="text/javascript"> </script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="./js/VotingAbi.js"></script>
+<script src="./js/app.js"></script>
+
+</html>

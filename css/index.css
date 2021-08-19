@@ -1,0 +1,21 @@
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+
+.show{
+    visibility: show;
+    display: inline-block;
+}
+
+.red{
+    color:red;
+}
+
+.green{
+    color: green;
+}
+
+.bg-grenn {
+    background-color: #2d9e00;
+}
